@@ -43,3 +43,56 @@ def choose_role():
                 return wizard
             
         print("Incorrect input!") 
+
+def game():
+    losses = 0
+    wins = 0
+    game_story()
+    role = choose_role()
+    start_challenges = input("Press Enter to start the challenges.")
+    result = role.challenge_1()
+    print("You got", result)
+    if result < 4:
+        print(f"Critical loss! The challenge is lost and Strength is decreased from {role.Strength} to {role.Strength-1}.")
+        losses += 1
+    elif result < 8:
+        print("Loss! The challenge is lost, but there is no change to your Strength.")  
+        losses += 1
+    elif result < 11:
+        print("Win! The challenge is won, but there is no change to your strength.")
+    else:
+        print(f"Critical win! The challenge is won, and your Strength is increased from {role.Strength} to {role.Strength+1}.")
+    result = role.challenge_2()
+    print("You got", result)
+    if result < 4:
+        print(f"Critical loss! The challenge is lost and Dexterity is decreased from {role.Dexterity} to {role.Dexterity-1}.")
+        losses += 1
+    elif result < 8:
+        print("Loss! The challenge is lost, but there is no change to your Dexterity.")  
+        losses += 1
+    elif result < 11:
+        print("Win! The challenge is won, but there is no change to your Dexterity.")
+    else:
+        print(f"Critical win! The challenge is won, and your Dexterity is increased from {role.Dexterity} to {role.Dexterity+1}.")              
+    result = role.challenge_3()
+    print("You got", result)
+    if result < 4:
+        print(f"Critical loss! The challenge is lost and Intelligence is decreased from {role.Intelligence} to {role.Intelligence-1}.")
+        losses += 1
+    elif result < 8:
+        print("Loss! The challenge is lost, but there is no change to your Intelligence.")  
+        losses += 1
+    elif result < 11:
+        print("Win! The challenge is won, but there is no change to your Intelligence.")
+    else:
+        print(f"Critical win! The challenge is won, and your Intelligence is increased from {role.Intelligence} to {role.Intelligence+1}.")    
+    if losses > 0:
+        print(f"Unfortunately you lost {losses} challenge(s)!\nGame Over")
+        restart = input("Enter 1 if you want to play again:")
+        if restart == '1':
+            game()
+    else:
+        print("Congratulations! You won all of the challenges and beat the dragon!\nGame Over")        
+        restart = input("Enter 1 if you want to play again:")
+        if restart == '1':
+            game()

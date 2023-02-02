@@ -9,6 +9,4 @@ import Game
 
 start = input("Press enter to start the game.")  #Once the player presses Enter the game will start
 
-Game.game_story()
-
-role = Game.choose_role()
+Game.game()
