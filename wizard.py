@@ -13,7 +13,7 @@ def challenge_1():
     '''
     from random import randrange
 
-    print("Your first challenge is to make your way to the castle and fight the guards that stand in your way. (This challenge is based on your Strength.)")
+    print("Your first challenge is to make your way to the castle and fight the guards that stand in your way. (This challenge is based on your Strength. Difficulty: Easy)")
     display_result = input("Press Enter to display the result.")
     return randrange(2, 13)
 
@@ -23,7 +23,7 @@ def challenge_2():
     '''
     from random import randrange
 
-    print("A knight just appeared! Your second challenge is to defeat the knight defending the dragon. (This challenge is based on your Dexterity.)")
+    print("A knight just appeared! Your second challenge is to defeat the knight defending the dragon. (This challenge is based on your Dexterity. Difficulty: Normal)")
     display_result = input("Press Enter to display the result.")
     return randrange(2, 13)
 
@@ -33,6 +33,6 @@ def challenge_3():
     '''
     from random import randrange
 
-    print("Alright this is the third and final challenge. Beat the dragon and it is over! (This challenge is based on your Intelligence.)")
+    print("Alright this is the third and final challenge. Beat the dragon and it is over! (This challenge is based on your Intelligence. Difficulty: Hard)")
     display_result = input("Press Enter to display the result.")
     return randrange(2, 13)
