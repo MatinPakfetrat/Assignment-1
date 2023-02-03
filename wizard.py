@@ -16,3 +16,13 @@ def challenge_1():
     print("Your first challenge is to make your way to the castle and fight the guards that stand in your way. (This challenge is based on your Strength.)")
     display_result = input("Press Enter to display the result.")
     return randrange(2, 13)
+
+def challenge_2():
+    '''
+    This function implements the second challenge.
+    '''
+    from random import randrange
+
+    print("A knight just appeared! Your second challenge is to defeat the knight defending the dragon. (This challenge is based on your Dexterity.)")
+    display_result = input("Press Enter to display the result.")
+    return randrange(2, 13)
