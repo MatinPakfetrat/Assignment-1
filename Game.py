@@ -45,13 +45,17 @@ def choose_role():
         print("Incorrect input!") 
 
 def game():
-    losses = 0
-    wins = 0
+    '''
+    This function starts the game by calling all of the other functions and evaluates the result of the dice throw and prints win or loss.
+    '''
+
+    losses = 0  #This variable is used to determine if the game is won or not
     game_story()
     role = choose_role()
     start_challenges = input("Press Enter to start the challenges.")
     result = role.challenge_1()
     print("You got", result)
+
     if result < 3:
         print(f"Critical loss! The challenge is lost and Strength is decreased from {role.Strength} to {role.Strength-1}.")
         losses += 1
@@ -64,6 +68,7 @@ def game():
         print(f"Critical win! The challenge is won, and your Strength is increased from {role.Strength} to {role.Strength+1}.")
     result = role.challenge_2()
     print("You got", result)
+
     if result < 4:
         print(f"Critical loss! The challenge is lost and Dexterity is decreased from {role.Dexterity} to {role.Dexterity-1}.")
         losses += 1
@@ -76,6 +81,7 @@ def game():
         print(f"Critical win! The challenge is won, and your Dexterity is increased from {role.Dexterity} to {role.Dexterity+1}.")              
     result = role.challenge_3()
     print("You got", result)
+
     if result < 4:
         print(f"Critical loss! The challenge is lost and Intelligence is decreased from {role.Intelligence} to {role.Intelligence-1}.")
         losses += 1
@@ -86,6 +92,7 @@ def game():
         print("Win! The challenge is won, but there is no change to your Intelligence.")
     else:
         print(f"Critical win! The challenge is won, and your Intelligence is increased from {role.Intelligence} to {role.Intelligence+1}.")    
+
     if losses > 0:
         print(f"Unfortunately you lost {losses} challenge(s)!\nGame Over")
         restart = input("Enter 1 if you want to play again:")

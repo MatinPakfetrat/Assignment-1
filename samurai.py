@@ -3,9 +3,9 @@ This module implements the data and logic associated with the first role (e.i., 
 It determines the attributes and the challenges of the role.
 '''
 
-Strength = 2
-Dexterity = 1
-Intelligence = 0
+Strength = 2  #This is the samurai's Strength
+Dexterity = 1  #This is the samurai's Dexterity
+Intelligence = 0  #This is the samurai's Intelligence
 
 def challenge_1():
     '''
