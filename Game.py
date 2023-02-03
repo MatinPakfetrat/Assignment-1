@@ -52,13 +52,13 @@ def game():
     start_challenges = input("Press Enter to start the challenges.")
     result = role.challenge_1()
     print("You got", result)
-    if result < 4:
+    if result < 3:
         print(f"Critical loss! The challenge is lost and Strength is decreased from {role.Strength} to {role.Strength-1}.")
         losses += 1
-    elif result < 8:
+    elif result < 5:
         print("Loss! The challenge is lost, but there is no change to your Strength.")  
         losses += 1
-    elif result < 11:
+    elif result < 8:
         print("Win! The challenge is won, but there is no change to your strength.")
     else:
         print(f"Critical win! The challenge is won, and your Strength is increased from {role.Strength} to {role.Strength+1}.")
@@ -67,10 +67,10 @@ def game():
     if result < 4:
         print(f"Critical loss! The challenge is lost and Dexterity is decreased from {role.Dexterity} to {role.Dexterity-1}.")
         losses += 1
-    elif result < 8:
+    elif result < 7:
         print("Loss! The challenge is lost, but there is no change to your Dexterity.")  
         losses += 1
-    elif result < 11:
+    elif result < 9:
         print("Win! The challenge is won, but there is no change to your Dexterity.")
     else:
         print(f"Critical win! The challenge is won, and your Dexterity is increased from {role.Dexterity} to {role.Dexterity+1}.")              
