@@ -99,7 +99,7 @@ def game():
         if restart == '1':
             game()
     else:
-        print("Congratulations! You won all of the challenges and beat the dragon!\nGame Over")        
+        print("Congratulations! You won all of the challenges and beat the dragon! You truly are an amazing Dragon Slayer.\nGame Over")        
         restart = input("Enter 1 if you want to play again:")
         if restart == '1':
             game()
